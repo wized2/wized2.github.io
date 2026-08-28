@@ -28,18 +28,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Panel controls
-  const panelRight = document.querySelector('.panel-right');
+  const panelLeft = document.querySelector('.panel-left');
   const panelOverlay = document.createElement('div');
   panelOverlay.className = 'panel-overlay';
   document.body.appendChild(panelOverlay);
 
   function openPanel() {
-    panelRight.classList.add('active');
+    panelLeft.classList.add('active');
     panelOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
   function closePanel() {
-    panelRight.classList.remove('active');
+    panelLeft.classList.remove('active');
     panelOverlay.classList.remove('active');
     document.body.style.overflow = '';
   }
@@ -51,30 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', closePanel);
   });
 
-  // Nav toggle for mobile - only activate on small screens
-  const navToggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  if (window.innerWidth <= 768 && navToggle && navLinks) {
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      const icon = navToggle.querySelector('i');
-      if (icon) {
-        const isMenu = icon.getAttribute('data-lucide') === 'menu';
-        icon.setAttribute('data-lucide', isMenu ? 'x' : 'menu');
-        if (typeof lucide !== 'undefined') lucide.createIcons();
-      }
-    });
-    navLinks.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        const icon = navToggle.querySelector('i');
-        if (icon) {
-          icon.setAttribute('data-lucide', 'menu');
-          if (typeof lucide !== 'undefined') lucide.createIcons();
-        }
-      });
-    });
-  }
+  // Nav toggle for mobile - removed as panel is now the main navigation
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
