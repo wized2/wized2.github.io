@@ -14,15 +14,41 @@
 <body>
   <header class="header">
     <nav class="nav">
+      <button class="nav-toggle nav-toggle-left" aria-label="Open left panel"><i data-lucide="panel-left"></i></button>
       <div class="nav-brand">wized2</div>
       <ul class="nav-links">
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Toggle menu"><i data-lucide="menu"></i></button>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle theme"><i data-lucide="sun"></i></button>
+        <button class="nav-toggle nav-toggle-right" aria-label="Open right panel"><i data-lucide="panel-right"></i></button>
+      </div>
     </nav>
   </header>
+  <aside class="panel panel-left">
+    <div class="panel-header">
+      <h3>Menu</h3>
+      <button class="panel-close" aria-label="Close panel"><i data-lucide="x"></i></button>
+    </div>
+    <nav class="panel-nav">
+      <a href="#about" class="panel-link"><i data-lucide="user"></i>About</a>
+      <a href="#projects" class="panel-link"><i data-lucide="folder"></i>Projects</a>
+      <a href="#contact" class="panel-link"><i data-lucide="mail"></i>Contact</a>
+    </nav>
+  </aside>
+  <aside class="panel panel-right">
+    <div class="panel-header">
+      <h3>Quick Links</h3>
+      <button class="panel-close" aria-label="Close panel"><i data-lucide="x"></i></button>
+    </div>
+    <nav class="panel-nav">
+      <a href="https://github.com/wized2" class="panel-link" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+      <a href="https://endroid.zone.id" class="panel-link" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Endroid</a>
+      <a href="https://e-host.zone.id/" class="panel-link" target="_blank" rel="noopener"><i data-lucide="server"></i>E-Host</a>
+    </nav>
+  </aside>
   <main>
     <section class="hero">
       <div class="hero-content">
@@ -50,11 +76,15 @@
       <div class="container">
         <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
-          <article class="project-card"><div class="project-header"><h3>Endroid Elyx AI</h3><span class="project-lang">AI</span></div><p class="project-desc">Free and open-source AI assistant powered by Gemini, featuring modern Material You 3 interface and seamless user experience.</p><div class="project-meta"><span><i data-lucide="star"></i> 0</span><span><i data-lucide="git-fork"></i> 0</span></div><a href="https://github.com/wized2" class="project-link" target="_blank" rel="noopener">Explore on GitHub <i data-lucide="arrow-right"></i></a></article>
-          <article class="project-card"><div class="project-header"><h3>Endroid Tools Suite</h3><span class="project-lang">PWA</span></div><p class="project-desc">Collection of utility web apps: Base64 encoder, Clock, Notes, Calculator, Maze, and Ludo Royale — all built with Material You 3 principles.</p><div class="project-meta"><span><i data-lucide="star"></i> 1</span><span><i data-lucide="git-fork"></i> 0</span></div><a href="https://endroid.zone.id" class="project-link" target="_blank" rel="noopener">Try Live <i data-lucide="arrow-right"></i></a></article>
-          <article class="project-card"><div class="project-header"><h3>Endroid Search</h3><span class="project-lang">Web</span></div><p class="project-desc">Lightweight, privacy-focused search interface with clean Material You 3 design and fast results.</p><div class="project-meta"><span><i data-lucide="star"></i> 0</span><span><i data-lucide="git-fork"></i> 0</span></div><a href="https://github.com/wized2" class="project-link" target="_blank" rel="noopener">View Source <i data-lucide="arrow-right"></i></a></article>
-          <article class="project-card"><div class="project-header"><h3>SnapLink</h3><span class="project-lang">HTML</span></div><p class="project-desc">A web application with live deployment demonstrating modern frontend practices and responsive design.</p><div class="project-meta"><span><i data-lucide="star"></i> 0</span><span><i data-lucide="git-fork"></i> 0</span></div><a href="https://github.com/wized2/SnapLink" class="project-link" target="_blank" rel="noopener">View Repository <i data-lucide="arrow-right"></i></a></article>
-          <article class="project-card"><div class="project-header"><h3>Endroid Hosting</h3><span class="project-lang">Static</span></div><p class="project-desc">Free static website hosting service for developers, integrated with Endroid ecosystem and GitHub workflows.</p><div class="project-meta"><span><i data-lucide="star"></i> 0</span><span><i data-lucide="git-fork"></i> 0</span></div><a href="https://github.com/wized2" class="project-link" target="_blank" rel="noopener">Learn More <i data-lucide="arrow-right"></i></a></article>
+          <article class="project-card"><div class="project-header"><h3>Endroid Elyx AI</h3><span class="project-lang">AI</span></div><p class="project-desc">Free and open-source AI assistant powered by Gemini, featuring modern Material You 3 interface and seamless user experience.</p><div class="project-meta"><span><i data-lucide="star"></i> 0</span><span><i data-lucide="git-fork"></i> 0</span></div><a href="https://wized2.github.io/Ai/" class="project-link" target="_blank" rel="noopener">Try Live <i data-lucide="arrow-right"></i></a></article>
+          <article class="project-card"><div class="project-header"><h3>Endroid Search</h3><span class="project-lang">Web</span></div><p class="project-desc">Lightweight, privacy-focused search interface with clean Material You 3 design and fast results.</p><div class="project-meta"><span><i data-lucide="star"></i> 0</span><span><i data-lucide="git-fork"></i> 0</span></div><a href="https://endroid.pages.dev/Search/" class="project-link" target="_blank" rel="noopener">Try Live <i data-lucide="arrow-right"></i></a></article>
+          <article class="project-card"><div class="project-header"><h3>Base64 Tools</h3><span class="project-lang">PWA</span></div><p class="project-desc">Encode and decode Base64 data instantly with a modern Material You 3 interface.</p><div class="project-meta"><span><i data-lucide="star"></i> 0</span><span><i data-lucide="git-fork"></i> 0</span></div><a href="https://endroid.pages.dev/Base64/" class="project-link" target="_blank" rel="noopener">Try Now <i data-lucide="arrow-right"></i></a></article>
+          <article class="project-card"><div class="project-header"><h3>Clock App</h3><span class="project-lang">PWA</span></div><p class="project-desc">Beautiful clock application with Material You 3 design principles.</p><div class="project-meta"><span><i data-lucide="star"></i> 0</span><span><i data-lucide="git-fork"></i> 0</span></div><a href="https://endroid.pages.dev/Clock/" class="project-link" target="_blank" rel="noopener">Open Clock <i data-lucide="arrow-right"></i></a></article>
+          <article class="project-card"><div class="project-header"><h3>Notes App</h3><span class="project-lang">PWA</span></div><p class="project-desc">Simple and elegant notes application built with Material You 3.</p><div class="project-meta"><span><i data-lucide="star"></i> 0</span><span><i data-lucide="git-fork"></i> 0</span></div><a href="https://endroid.pages.dev/Notes/" class="project-link" target="_blank" rel="noopener">Open Notes <i data-lucide="arrow-right"></i></a></article>
+          <article class="project-card"><div class="project-header"><h3>Calculator</h3><span class="project-lang">PWA</span></div><p class="project-desc">Sleek calculator with Material You 3 design for everyday calculations.</p><div class="project-meta"><span><i data-lucide="star"></i> 0</span><span><i data-lucide="git-fork"></i> 0</span></div><a href="https://endroid.pages.dev/Calculator/" class="project-link" target="_blank" rel="noopener">Calculate <i data-lucide="arrow-right"></i></a></article>
+          <article class="project-card"><div class="project-header"><h3>Maze Game</h3><span class="project-lang">Game</span></div><p class="project-desc">Fun maze game built with modern web technologies and Material You 3 styling.</p><div class="project-meta"><span><i data-lucide="star"></i> 0</span><span><i data-lucide="git-fork"></i> 0</span></div><a href="https://endroid.pages.dev/Maze/" class="project-link" target="_blank" rel="noopener">Play Maze <i data-lucide="arrow-right"></i></a></article>
+          <article class="project-card"><div class="project-header"><h3>Ludo Royale</h3><span class="project-lang">Game</span></div><p class="project-desc">Classic Ludo game reimagined with Material You 3 design and multiplayer support.</p><div class="project-meta"><span><i data-lucide="star"></i> 0</span><span><i data-lucide="git-fork"></i> 0</span></div><a href="https://endroid-ludo-royale.vercel.app/" class="project-link" target="_blank" rel="noopener">Play Ludo <i data-lucide="arrow-right"></i></a></article>
+          <article class="project-card"><div class="project-header"><h3>E-Host Hosting</h3><span class="project-lang">Static</span></div><p class="project-desc">Free static website hosting service integrated with Endroid ecosystem.</p><div class="project-meta"><span><i data-lucide="star"></i> 0</span><span><i data-lucide="git-fork"></i> 0</span></div><a href="https://e-host.zone.id/" class="project-link" target="_blank" rel="noopener">Learn More <i data-lucide="arrow-right"></i></a></article>
         </div>
         <div class="projects-footer"><a href="https://github.com/wized2?tab=repositories" class="btn btn-outline" target="_blank" rel="noopener">View All Repositories <i data-lucide="arrow-up-right"></i></a></div>
       </div>
