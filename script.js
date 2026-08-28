@@ -29,24 +29,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Panel controls
   const panelLeft = document.querySelector('.panel-left');
-  const panelOverlay = document.createElement('div');
-  panelOverlay.className = 'panel-overlay';
-  document.body.appendChild(panelOverlay);
+  const panelOverlay = panelLeft?.querySelector('.panel-overlay');
 
   function openPanel() {
     panelLeft.classList.add('active');
-    panelOverlay.classList.add('active');
+    panelOverlay?.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
   function closePanel() {
     panelLeft.classList.remove('active');
-    panelOverlay.classList.remove('active');
+    panelOverlay?.classList.remove('active');
     document.body.style.overflow = '';
   }
 
   document.querySelector('.nav-toggle')?.addEventListener('click', openPanel);
   document.querySelector('.panel-close')?.addEventListener('click', closePanel);
-  panelOverlay.addEventListener('click', closePanel);
+  panelOverlay?.addEventListener('click', closePanel);
   document.querySelectorAll('.panel-link').forEach(link => {
     link.addEventListener('click', closePanel);
   });
