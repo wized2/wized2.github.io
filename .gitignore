@@ -3,24 +3,28 @@
 *.pyc
 *.class
 *.o
+*.obj
+*.out
 *.exe
 *.dll
 *.so
 *.a
-*.obj
-*.out
 
 # Dependencies
 node_modules/
 venv/
 .venv/
 __pycache__/
-dist/
-build/
+.mypy_cache/
+.pytest_cache/
 target/
 .gradle/
 
-# Editor/IDE files
+# Build artifacts
+dist/
+build/
+
+# Editors/IDE
 .vscode/
 .idea/
 *.swp
@@ -34,13 +38,15 @@ Thumbs.db
 .env.local
 *.env.*
 
-# Logs and coverage
+# Logs
 *.log
+
+# Coverage
 coverage/
 htmlcov/
 .coverage
 
-# Common compressed files
+# Compressed files
 *.zip
 *.gz
 *.tar
