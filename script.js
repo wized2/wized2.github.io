@@ -1,61 +1,28 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-  if (typeof lucide !== 'undefined') lucide.createIcons();
-
-  // Theme toggle
-  const themeToggle = document.querySelector('.theme-toggle');
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
-  }
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      updateThemeIcon(newTheme);
+(() => {
+  const form = document.querySelector('.note-form');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      // If Formspree id is placeholder, open WhatsApp instead
+      if (form.action.includes('xpwnqzyd')) {
+        e.preventDefault();
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const msg = form.message.value.trim();
+        const text = encodeURIComponent(`Hi Mudasir (wized2),\nName: ${name}\nEmail: ${email}\n\n${msg}`);
+        window.open(`https://wa.me/923073477752?text=${text}`, '_blank', 'noopener');
+      }
     });
   }
-  function updateThemeIcon(theme) {
-    const icon = themeToggle?.querySelector('i');
-    if (icon) {
-      icon.setAttribute('data-lucide', theme === 'light' ? 'moon' : 'sun');
-      if (typeof lucide !== 'undefined') lucide.createIcons();
-    }
-  }
 
-  // Panel controls
-  const panelLeft = document.querySelector('.panel-left');
-  const panelOverlay = panelLeft?.querySelector('.panel-overlay');
-
-  function openPanel() {
-    panelLeft.classList.add('active');
-    panelOverlay?.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-  function closePanel() {
-    panelLeft.classList.remove('active');
-    panelOverlay?.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  document.querySelector('.nav-toggle')?.addEventListener('click', openPanel);
-  document.querySelector('.panel-close')?.addEventListener('click', closePanel);
-  panelOverlay?.addEventListener('click', closePanel);
-  document.querySelectorAll('.panel-link').forEach(link => {
-    link.addEventListener('click', closePanel);
-  });
-
-  // Nav toggle for mobile - removed as panel is now the main navigation
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if (href === '#') return;
-      const target = document.querySelector(href);
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  // Active nav highlight
+  const links = [...document.querySelectorAll('.nav-links a')];
+  const sections = links.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      const id = '#' + en.target.id;
+      links.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === id));
     });
-  });
-});
+  }, { rootMargin: '-40% 0px -50% 0px' });
+  sections.forEach((s) => io.observe(s));
+})();

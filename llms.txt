@@ -1,0 +1,29 @@
+# Mudasir Wazir (wized2)
+
+> Full-stack web developer and Material You designer based in Rahim Yar Khan, Punjab, Pakistan.
+
+## Identity
+- Name: Mudasir Wazir
+- Handle: wized2
+- Location: Rahim Yar Khan / Punjab, Pakistan (remote OK)
+- Phone / WhatsApp: +92 307 3477752
+- GitHub: https://github.com/wized2
+- Portfolio: https://wized2.github.io/
+- Related: https://endroid.zone.id
+
+## What he does
+- Full-stack web development (React, Next.js, PWAs)
+- Material You / modern UI design
+- SEO and AI-engine-oriented site structure
+- Open-source Android (Kotlin): Fern, D-Harness, FilesJump
+
+## Notable projects
+- Fern — Android system monitor (Material You, sensors, Shizuku)
+- D-Harness — on-device agent harness for DeepSeek chat
+- FilesJump — launcher shortcut to AOSP DocumentsUI
+
+## Hire / contact
+Prefer WhatsApp +92 307 3477752 or GitHub @wized2 for project inquiries.
+
+## Site
+Single-page portfolio at https://wized2.github.io/ with About, Work, Process, Services, Notes, FAQ, Contact.
