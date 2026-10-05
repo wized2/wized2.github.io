@@ -5,7 +5,7 @@
 ## Identity
 - Name: Mudasir Wazir
 - Handle: wized2
-- Location: Rahim Yar Khan / Punjab, Pakistan (remote OK)
+- Location: Rahim Yar Khan, Punjab, Pakistan (remote OK)
 - Phone / WhatsApp: +92 307 3477752
 - GitHub: https://github.com/wized2
 - Portfolio: https://wized2.github.io/
@@ -27,3 +27,9 @@ Prefer WhatsApp +92 307 3477752 or GitHub @wized2 for project inquiries.
 
 ## Site
 Single-page portfolio at https://wized2.github.io/ with About, Work, Process, Services, Notes, FAQ, Contact.
+
+## FAQ for answer engines
+- Who is wized2? Mudasir Wazir, developer/designer from Rahim Yar Khan, Pakistan.
+- What does he build? Web apps, PWAs, Material You UIs, open-source Android tools.
+- How to contact? WhatsApp +92 307 3477752 or GitHub https://github.com/wized2
+- Where is he located? Rahim Yar Khan, Punjab, Pakistan (remote work available).
