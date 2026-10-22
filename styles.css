@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "Anthropic Serif";
+  font-family: "Endroid Serif";
   src: url("fonts/anthropic_serif.ttf") format("truetype");
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Anthropic Sans";
+  font-family: "Endroid Sans";
   src: url("fonts/anthropic_sans.ttf") format("truetype");
   font-weight: 400 700;
   font-style: normal;
@@ -35,8 +35,8 @@
   --radius: 16px;
   --radius-sm: 10px;
   --shell: min(1080px, calc(100% - 2.5rem));
-  --serif: "Anthropic Serif", "Georgia", "Times New Roman", serif;
-  --sans: "Anthropic Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "Endroid Serif", "Georgia", "Times New Roman", serif;
+  --sans: "Endroid Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
