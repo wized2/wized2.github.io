@@ -1,7 +1,8 @@
 # wized2.github.io
 
-Portfolio of **Mudasir Wazir (wized2)** — full-stack developer & Material You designer.
+Personal portfolio for **Mudasir Wazir** (`wized2`).
 
-Live: https://wized2.github.io/
+- Live: https://wized2.github.io/
+- Mirror: https://mudasir-wazir.vercel.app
 
-Includes Fast-style scrapbook UI, SEO meta, JSON-LD, `sitemap.xml`, `robots.txt`, and `llms.txt` for AI engines.
+Claude-inspired layout, Anthropic fonts (local), Lucide icons.

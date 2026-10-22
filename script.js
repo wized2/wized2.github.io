@@ -1,28 +1,33 @@
-(() => {
-  const form = document.querySelector('.note-form');
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      // If Formspree id is placeholder, open WhatsApp instead
-      if (form.action.includes('xpwnqzyd')) {
-        e.preventDefault();
-        const name = form.name.value.trim();
-        const email = form.email.value.trim();
-        const msg = form.message.value.trim();
-        const text = encodeURIComponent(`Hi Mudasir (wized2),\nName: ${name}\nEmail: ${email}\n\n${msg}`);
-        window.open(`https://wa.me/923073477752?text=${text}`, '_blank', 'noopener');
-      }
-    });
+(function () {
+  function ready(fn) {
+    if (document.readyState !== "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
   }
 
-  // Active nav highlight
-  const links = [...document.querySelectorAll('.nav-links a')];
-  const sections = links.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((en) => {
-      if (!en.isIntersecting) return;
-      const id = '#' + en.target.id;
-      links.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === id));
-    });
-  }, { rootMargin: '-40% 0px -50% 0px' });
-  sections.forEach((s) => io.observe(s));
+  ready(function () {
+    var y = document.getElementById("y");
+    if (y) y.textContent = String(new Date().getFullYear());
+
+    var header = document.querySelector(".site-header");
+    function onScroll() {
+      if (!header) return;
+      header.classList.toggle("scrolled", window.scrollY > 8);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    function mountIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === "function") {
+        window.lucide.createIcons({
+          attrs: {
+            "stroke-width": 1.75,
+          },
+        });
+      }
+    }
+    mountIcons();
+    // Lucide may load after defer order races
+    setTimeout(mountIcons, 50);
+    setTimeout(mountIcons, 300);
+  });
 })();

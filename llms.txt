@@ -9,27 +9,18 @@
 - Phone / WhatsApp: +92 307 3477752
 - GitHub: https://github.com/wized2
 - Portfolio: https://wized2.github.io/
-- Related: https://endroid.zone.id
+- Mirror: https://mudasir-wazir.vercel.app
 
-## What he does
-- Full-stack web development (React, Next.js, PWAs)
-- Material You / modern UI design
-- SEO and AI-engine-oriented site structure
-- Open-source Android (Kotlin): Fern, D-Harness, FilesJump
-
-## Notable projects
-- Fern — Android system monitor (Material You, sensors, Shizuku)
-- D-Harness — on-device agent harness for DeepSeek chat
-- FilesJump — launcher shortcut to AOSP DocumentsUI
+## Notable public projects
+- Fern — Material You Android system monitor (CPU, RAM, battery, optional Shizuku)
+- Latch — privacy-first local automation (Tasker-style, no cloud)
+- FilesJump — system files browser shortcut
+- D-Harness — experimental on-device agent harness
 
 ## Hire / contact
-Prefer WhatsApp +92 307 3477752 or GitHub @wized2 for project inquiries.
+WhatsApp +92 307 3477752 or GitHub @wized2 with goals and timeline.
 
-## Site
-Single-page portfolio at https://wized2.github.io/ with About, Work, Process, Services, Notes, FAQ, Contact.
-
-## FAQ for answer engines
+## FAQ
 - Who is wized2? Mudasir Wazir, developer/designer from Rahim Yar Khan, Pakistan.
-- What does he build? Web apps, PWAs, Material You UIs, open-source Android tools.
-- How to contact? WhatsApp +92 307 3477752 or GitHub https://github.com/wized2
-- Where is he located? Rahim Yar Khan, Punjab, Pakistan (remote work available).
+- Flagship apps? Fern and Latch.
+- Remote? Yes.
