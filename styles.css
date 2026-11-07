@@ -120,6 +120,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   padding: var(--space-sm) 0;
   flex-wrap: wrap;
 }
+.header-cta {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
 .brand {
   display: flex;
   align-items: center;
@@ -198,7 +202,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .btn--secondary:active, .btn-ghost:active {
   box-shadow: 1px 1px 0 var(--color-rule);
 }
-.btn-sm { padding: 0.35rem 0.75rem; font-size: 0.85rem; }
+.btn-sm { padding: 0.4rem 0.85rem; font-size: 0.85rem; line-height: 1.2; }
 .btn.full, .full { width: 100%; }
 .hero-actions, .cta-row {
   display: flex;
@@ -448,13 +452,50 @@ code, .figure {
 
 /* Responsive polish 2026-11 */
 @media (max-width: 720px) {
+  .header-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: var(--space-sm);
+    row-gap: var(--space-sm);
+    padding-block: var(--space-sm);
+  }
+  .brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .header-cta {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+  .nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.35rem;
+    font-size: 0.82rem;
+  }
+  .nav a {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 0.35rem 0.25rem;
+  }
+
   .hero h1 {
     font-size: clamp(1.85rem, 8vw, 2.4rem);
     line-height: 1.12;
   }
+  .hero-kicker {
+    letter-spacing: 0.06em;
+    font-size: 0.72rem;
+  }
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
+    gap: 0.65rem;
   }
   .hero-actions .btn {
     width: 100%;
@@ -464,8 +505,8 @@ code, .figure {
   .skills-grid {
     grid-template-columns: 1fr;
   }
-  .nav-inner {
-    gap: 0.5rem;
+  .shell {
+    width: min(100% - 1.25rem, var(--measure, 72rem));
   }
 }
 
@@ -497,5 +538,22 @@ html {
   .btn, .nav a, .chip {
     min-height: 44px;
     min-width: 44px;
+  }
+}
+
+/* Tablet header: keep brand + CTA on one row, nav full width */
+@media (min-width: 721px) and (max-width: 900px) {
+  .header-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    row-gap: var(--space-sm);
+  }
+  .brand { grid-column: 1; grid-row: 1; }
+  .header-cta { grid-column: 2; grid-row: 1; }
+  .nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-left: 0;
+    justify-content: flex-start;
   }
 }
